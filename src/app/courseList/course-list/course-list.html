@@ -1,0 +1,29 @@
+<section class="courses-section">
+  <div class="section-header">
+    <h2>Our Popular <span>Courses</span></h2>
+    <p>Choose from our wide range of industry-level technical courses.</p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Price (INR)</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of courseDetails; track item.name) {
+        <tr>
+          <td><strong>{{ item.name }}</strong></td>
+          <td>₹{{ item.price }}</td>
+          <td class="text-center">
+            <button class="enroll-btn" (click)="onEnroll(item.name)" >Enroll Now</button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

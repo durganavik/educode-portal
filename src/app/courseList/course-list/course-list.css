@@ -1,0 +1,57 @@
+.courses-section {
+  padding: 60px 10%;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 { font-size: 32px; color: #333; }
+.section-header h2 span { color: #009879; }
+.section-header p { color: #777; margin-top: 10px; }
+
+.table-wrapper {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table thead tr {
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: left;
+}
+
+.styled-table th, .styled-table td {
+  padding: 18px 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #fcfcfc;
+}
+
+.text-center { text-align: center; }
+
+.enroll-btn {
+  background: #009879;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.enroll-btn:hover {
+  background: #007a61;
+  transform: scale(1.05);
+}

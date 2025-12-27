@@ -1,0 +1,15 @@
+.hero {
+  display: flex;
+  padding: 80px 10%;
+  align-items: center;
+  background: #f9f9f9;
+  gap: 50px;
+}
+.hero-content { flex: 1; }
+.hero-content h1 { font-size: 45px; color: #333; margin-bottom: 20px; }
+.hero-content p { font-size: 18px; color: #666; margin-bottom: 30px; }
+.hero-btns { display: flex; gap: 15px; }
+.btn-primary { background: #009879; color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; }
+.btn-secondary { background: white; border: 2px solid #009879; color: #009879; padding: 12px 25px; border-radius: 5px; cursor: pointer; }
+.hero-image { flex: 1; text-align: right; }
+.hero-image img { width: 100%; max-width: 500px; }
