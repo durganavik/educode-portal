@@ -1,0 +1,44 @@
+<div class="mentor-page">
+  <div class="header-section">
+    <h1>Our Industry <span>Experts</span></h1>
+    <p>Learn from the top 1% professionals earning six-figure salaries.</p>
+  </div>
+  
+  <div class="mentors-list-wrapper">
+    @for (mentor of mentorsList; track mentor.role) {
+      <div class="mentor-row">
+        <div class="mentor-container">
+          <!-- Left Visual -->
+          <div class="mentor-visual">
+            <div class="icon-bg" [style.backgroundColor]="mentor.color">
+              <img [src]="mentor.image" alt="Mentor Icon">
+            </div>
+          </div>
+
+          <!-- Right Details -->
+          <div class="mentor-details">
+            <h2>{{ mentor.role }}</h2>
+            <p class="salary-tag">(AVERAGE SALARY: {{ mentor.salary }} )</p>
+            <p class="mentor-bio">{{ mentor.bio }}</p>
+
+            <div class="classes-section">
+              <h3>Core Modules:</h3>
+              <ul class="classes-list">
+                @for (cls of mentor.classes; track cls) {
+                  <li>• {{ cls }}</li>
+                }
+              </ul>
+            </div>
+
+            <div class="action-btns">
+              <button class="enroll-btn">Enroll Now</button>
+              <button class="learn-btn">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <!-- Row Separator -->
+        <hr class="mentor-divider">
+      </div>
+    }
+  </div>
+</div>

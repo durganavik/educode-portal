@@ -1,0 +1,55 @@
+<div class="courses-container">
+  <div class="section-header">
+    <h1>All Courses</h1>
+    <p>Broaden your horizons with our professional coding tracks.</p>
+    
+    <!-- 🔍 Search Bar -->
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input 
+        type="text" 
+        placeholder="Search for courses or mentors..." 
+        (input)="updateSearch($event)"
+      >
+    </div>
+  </div>
+
+  <div class="courses-grid">
+    <!-- Loop starts here -->
+    @for (course of filteredCourses(); track course.name) {
+      <div class="course-card">
+        <!-- 1. Image Section -->
+        <div class="course-img">
+          <img [src]="course.image" [alt]="course.name">
+          @if (course.badge) {
+            <span class="bestseller-badge">{{ course.badge }}</span>
+          }
+        </div>
+
+        <!-- 2. Info Section -->
+        <div class="course-info">
+          <h3>{{ course.name }}</h3>
+          <p class="mentor">{{ course.mentor }}</p>
+          
+          <div class="rating">
+            <span class="rating-num">{{ course.rating }}</span>
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span class="reviews">({{ course.reviews }})</span>
+          </div>
+
+          <div class="pricing">
+            <span class="current-price">₹{{ course.price }}</span>
+            <span class="old-price">₹{{ course.oldPrice }}</span>
+          </div>
+        </div>
+      </div>
+    } @empty {
+      <!-- 3. No Results State -->
+      <div class="no-results">
+        <img src="https://cdn-icons-png.flaticon.com/512/6134/6134065.png" alt="Not found">
+        <h3>Oops! No courses found</h3>
+        <p>Try searching for something else like "Angular" or "React".</p>
+      </div>
+    }
+  </div>
+</div>

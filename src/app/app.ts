@@ -1,17 +1,14 @@
-import { Component, signal } from '@angular/core';
+// app.ts (Aapka main component)
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from "../navbar/navbar/navbar";
-import { CourseList } from './courseList/course-list/course-list';
-import { Hero } from './hero/hero/hero';
-import { Footer } from "./footer/footer";
-
+import { Navbar } from './components/navbar/navbar'; 
+import { Footer } from './components/footer/footer'; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, CourseList, Hero, Footer],
+  standalone: true,
+  imports: [RouterOutlet, Navbar, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('educode-portal');
-}
+export class App { }

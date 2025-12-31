@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="logo" routerLink="/home">Edu<span>Code</span></div>
+  
+  <ul class="nav-links">
+    <!-- href="#" hata kar routerLink="/path" likhein -->
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/courses" routerLinkActive="active">Courses</a></li>
+    <li><a routerLink="/mentors" routerLinkActive="active">Mentors</a></li>
+  </ul>
+
+  <div class="nav-btns">
+    <!-- Log In button ko bhi link banayein -->
+    <button routerLink="/login" class="login-btn">Log In</button>
+    <button class="signup-btn">Join Now</button>
+  </div>
+</nav>

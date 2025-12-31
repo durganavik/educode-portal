@@ -1,0 +1,31 @@
+<div class="login-page">
+  <div class="login-card">
+    <div class="login-header">
+      <div class="logo">Edu<span>Code</span></div>
+      <p>Sign in to continue your learning journey</p>
+    </div>
+
+    <!-- Error message agar login fail ho -->
+    @if (errorMessage()) {
+      <p style="color: red; font-size: 12px; margin-bottom: 10px;">{{ errorMessage() }}</p>
+    }
+
+    <form class="login-form" (submit)="onLogin(); $event.preventDefault()">
+      <div class="input-group">
+        <label>EMAIL*</label>
+        <!-- [(ngModel)] se data TS mein jayega -->
+        <input type="email" name="email" [ngModel]="email()" (ngModelChange)="email.set($event)" placeholder="admin@educode.com" required>
+      </div>
+
+      <div class="input-group">
+        <label>PASSWORD*</label>
+        <input type="password" name="password" [ngModel]="password()" (ngModelChange)="password.set($event)" placeholder="123456" required>
+      </div>
+
+      <button type="submit" class="signin-btn">SIGN IN</button>
+    </form>
+
+    <!-- Baaki social buttons ka design same rahega -->
+    ...
+  </div>
+</div>
